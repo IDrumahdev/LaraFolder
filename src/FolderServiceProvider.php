@@ -13,10 +13,10 @@ class FolderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('ibnudirsan.LaraAssets.commands', function($app) {
-            return $app['Ibnudirsan\LaraAssets\Commands\LaraAssets'];
+        $this->app->singleton('Ibnudirsan\LaraAssets\Commands', function($app) {
+            return $app['Ibnudirsan\LaraAssets\Commands\AssetFolder'];
         });
-        $this->commands('ibnudirsan.LaraAssets.commands');
+        $this->commands('Ibnudirsan\LaraAssets\Commands');
     }
 
     /**
