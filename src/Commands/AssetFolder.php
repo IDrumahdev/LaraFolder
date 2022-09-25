@@ -2,7 +2,9 @@
 
 namespace Ibnudirsan\LaraAssets\Commands;
 
+use File;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class AssetFolder extends Command
 {
@@ -27,6 +29,18 @@ class AssetFolder extends Command
      */
     public function handle()
     {
+        /**
+         * Example Syntax to create Folder
+         */
+        if(!File::exists(public_path('assets/reportx'))) {
+            File::makeDirectory(public_path('/public/assetsx/report/mutasiBank/dailyMail'));
+            Log::info('Message : Success Created Folder');
+        } else {
+            Log::info('Message : Aready Created Folder');
+            $this->components->info('Aready Created Folder.');
+            exit;
+        } 
+
         $bar = $this->output->createProgressBar(6);
         $bar->start();
         for ($i=1; $i <= 6; $i++) {
