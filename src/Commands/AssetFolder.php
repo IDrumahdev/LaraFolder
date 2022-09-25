@@ -32,9 +32,12 @@ class AssetFolder extends Command
         /**
          * Example Syntax to create Folder
          */
-        if(!File::exists(public_path('assets/AssetFolder'))) {
-            File::makeDirectory(public_path('assets/AssetFolder'));
-            Log::info('Message : Success Created Folder');
+        if(!File::exists(public_path('asset'))) {
+            File::makeDirectory(public_path('asset'));
+                if(!File::exists(public_path('asset/AssetFolder'))) {
+                    File::makeDirectory(public_path('asset/AssetFolder'));
+                    Log::info('Message : Success Created Folder');
+                }
         } else {
             Log::info('Message : Aready Created Folder');
             $this->components->info('Aready Created Folder.');
@@ -50,7 +53,7 @@ class AssetFolder extends Command
             $bar->finish();
             $this->newLine(2);
             $this->line('List Created Folder ');
-            $this->components->twoColumnDetail('1)', 'assets/AssetFolder');
+            $this->components->twoColumnDetail('1)', 'asset/AssetFolder');
             $this->newLine();
             $this->components->info('Successfully created folder report in assets.');
             $this->line('<bg=green;fg=black>..:: Created by ibnudirsan ::..</>');
