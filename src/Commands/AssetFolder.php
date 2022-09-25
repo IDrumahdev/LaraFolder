@@ -4,7 +4,7 @@ namespace Ibnudirsan\LaraAssets\Commands;
 
 use Illuminate\Console\Command;
 
-class LaraAssets extends Command
+class AssetFolder extends Command
 {
     /**
      * The name and signature of the console command.
@@ -18,7 +18,7 @@ class LaraAssets extends Command
      *
      * @var string
      */
-    protected $description = 'Command to create a new folder in assets';
+    protected $description = 'Command to make a new folder in assets folder';
 
     /**
      * Execute the console command.
