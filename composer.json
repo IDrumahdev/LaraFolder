@@ -1,0 +1,24 @@
+{
+    "name": "ibnudirsan/lara-assets",
+    "description": "Commands Artisan create a folder in laravel by ibnudirsan.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ibnudirsan\\LaraAssets\\": "src/"
+        }
+    },
+    "extra": {
+        "Laravel": {
+            "providers": [
+                "Ibnudirsan\\LaraAssets\\FolderServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "ibnudirsan"
+        }
+    ],
+    "require": {}
+}
